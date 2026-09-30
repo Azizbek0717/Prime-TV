@@ -1,6 +1,0 @@
-python-telegram-bot==20.7
-yt-dlp
-openai
-google-genai
-Pillow
-requests
