@@ -92,7 +92,7 @@ DB_PATH = str(
 )
 DB_BACKUP_PATH = f"{DB_PATH}.backup"
 MOVIES_PAGE_SIZE = 12
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "key").strip()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 OPENAI_KEY_SOURCE = "workspace Secret" if OPENAI_API_KEY else "sozlanmagan"
 GEMINI_KEY_SOURCE = "workspace Secret" if GEMINI_API_KEY else "sozlanmagan"
