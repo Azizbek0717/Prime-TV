@@ -5995,6 +5995,11 @@ def build_application() -> Application:
 if __name__ == "__main__":
     # Render Web Service uchun HTTP portni alohida thread'da ochamiz.
     threading.Thread(target=start_render_health_server, daemon=True).start()
+
+    # Python 3.14 da asyncio.get_event_loop() avtomatik loop yaratmaydi.
+    # python-telegram-bot run_polling() uchun asosiy thread'da loopni oldindan yaratamiz.
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
     app = build_application()
     logger.info(
         "AI: OpenAI=%s | Gemini=%s | FFmpeg=%s",
